@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id 'maven-publish'
 }
 
 android {
@@ -31,20 +30,6 @@ android {
 }
 
 dependencies {
-    implementation(name: 'ffmpeg-kit-full-gpl-6.0-2', ext: 'aar')
+    implementation libs.ffmpeg.kit.full.gpl
     implementation libs.androidx.work.runtime.ktx
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-
-                groupId = 'com.clipfy.library'   // غيّرها حسب اسم مجموعتك
-                artifactId = 'clipfy-library'    // اسم مكتبتك عند النشر
-                version = '1.0.3'                // نسخة النشر
-            }
-        }
-    }
 }
