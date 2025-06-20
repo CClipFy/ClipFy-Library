@@ -7,7 +7,7 @@ import android.content.Intent
 class CancelProcessingReceiver : BroadcastReceiver() {
 
     companion object {
-        const val ACTION_CANCEL_PROCESSING = "com.clipfy.toolkit.CANCEL_PROCESSING"
+        const val ACTION_CANCEL_PROCESSING = "com.clipfy.library.CANCEL_PROCESSING"
     }
 
     override fun onReceive(context: Context, intent: Intent?) {
